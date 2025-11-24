@@ -21,7 +21,7 @@ export class Subject {
   max_clases: number;
 
   @ManyToOne(() => Users, (user) => user.subjects)
-  @JoinColumn({ name: 'profesor_id' }) // ← AQUÍ VINCULAS LA FK REAL
+  @JoinColumn({ name: 'profesor_id' })
   profesor: Users;
 
   @Column({ name: 'profesor_id' })

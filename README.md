@@ -8,14 +8,15 @@ npm install
 
 ## Configuración
 
-Cree un archivo `.env`:
-
 ```
-DB_HOST=localhost
-DB_PORT=3306
-DB_USERNAME=root
-DB_PASSWORD=tu_password
-DB_DATABASE=horarios
+type: 'mysql',
+host: 'localhost',
+port: 3306,
+username: 'root',
+password: '244148@Mari0',
+database: 'horarios',
+autoLoadEntities: true,
+synchronize: true,
 ```
 
 ## Ejecutar
