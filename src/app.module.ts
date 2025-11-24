@@ -7,12 +7,12 @@ import { ScheduleModule } from './schedule/schedule.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '244148@Mari0',
-      database: 'horarios',
+      type: process.env.TYPE as 'mysql',
+      host: process.env.HOST,
+      port: Number(process.env.PORT),
+      username: process.env.USER_NAME,
+      password: process.env.PASSWORD,
+      database: process.env.DATA_BASE,
       autoLoadEntities: true,
       synchronize: true,
     }),

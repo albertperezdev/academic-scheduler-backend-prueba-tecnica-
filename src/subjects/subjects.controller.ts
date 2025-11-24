@@ -20,7 +20,7 @@ export class SubjectsController {
     return this.subjectsService.create(dto);
   }
 
-  @Get()
+  @Get('all')
   findAll() {
     return this.subjectsService.findAll();
   }
@@ -35,7 +35,7 @@ export class SubjectsController {
     return this.subjectsService.update(+id, dto);
   }
 
-  @Delete('eliminar/:id')
+  @Delete('delete/:id')
   remove(@Param('id') id: string) {
     return this.subjectsService.remove(+id);
   }

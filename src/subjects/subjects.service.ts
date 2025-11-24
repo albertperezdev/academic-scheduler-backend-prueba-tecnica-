@@ -19,7 +19,7 @@ export class SubjectsService {
   ) {}
 
   async create(dto: CreateSubjectDto) {
-    const profesor = await this.usersService.findOne(dto.profesorId);
+    const profesor = await this.usersService.findOne(dto.profesor_id);
 
     if (!profesor) {
       throw new NotFoundException('El profesor no existe');
@@ -44,9 +44,11 @@ export class SubjectsService {
   }
 
   async update(id: number, dto: UpdateSubjectDto) {
-    if (!dto.profesorId)
-      throw new BadRequestException('Debe enviar profesorId al actualizar');
-    const profesor = await this.usersService.findOne(dto.profesorId);
+    if (!dto.profesor_id) {
+      throw new BadRequestException('Debe enviar profesor_id al actualizar');
+    }
+
+    const profesor = await this.usersService.findOne(dto.profesor_id);
 
     if (!profesor) {
       throw new NotFoundException('El profesor no existe');

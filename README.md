@@ -29,29 +29,30 @@ npm run start:dev
 ### Usuarios
 
 ```
-GET /users
+POST /users/create
+GET /users/all
 GET /users/:id
-POST /users
-PATCH /users/:id
-DELETE /users/:id
+PATCH /users/edit/:id
+DELETE /users/delete/:id
 ```
 
 ### Subjects
 
 ```
 POST /subjects/create
-GET /subjects
+GET /subjects/all
 GET /subjects/:id
 PATCH /subjects/actualizar/:id
-DELETE /subjects/eliminar/:id
+DELETE /subjects/delete/:id
 ```
 
 ### Schedules
 
 ```
-POST /schedule
-GET /schedule
+POST /schedule/create
+GET /schedule/all
 GET /schedule/:id
-PATCH /schedule/:id
-DELETE /schedule/eliminar/:id
+GET /schedule/user/:id
+PATCH /schedule/edit/:id
+DELETE /schedule/delete/:id
 ```
